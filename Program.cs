@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Encryption_Task2
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             DataPharser dp = new DataPharser();
             string str = dp.getMessage("Message.txt");
@@ -17,7 +14,7 @@ namespace Encryption_Task2
                 .ToDictionary(g => g.Key, g => g.Count());
             foreach (var item in res)
             {
-                Console.WriteLine("item - {0}, frequaecy-{1:0.###}" ,item,(double)item.Value/str.Length);
+                Console.WriteLine("item - {0}, frequency -{1:0.###}", item, (double)item.Value / str.Length);
             }
         }
     }

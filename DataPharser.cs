@@ -12,5 +12,14 @@ namespace Encryption_Task2
                 return stream.ReadToEnd();
             }
         }
+
+        public char[] GetAlphabet()
+        {
+            using (StreamReader stream = new StreamReader("Alphabet.txt", Encoding.Default))
+            {
+                char[] alphabet = stream.ReadToEnd().ToCharArray();
+                return alphabet;
+            }
+        }
     }
 }
